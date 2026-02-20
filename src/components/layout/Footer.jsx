@@ -56,11 +56,16 @@ export default function Footer() {
           <div className={styles.section}>
             <h3 className={styles.heading}>Resources</h3>
             <ul className={styles.list}>
-              <li><Link href="/blog">Blog</Link></li>
+              {/* <li><Link href="/blog">Blog</Link></li>
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/privacy">Privacy Policy</Link></li>
               <li><Link href="/terms">Terms of Use</Link></li>
+              <li><Link href="/disclaimer">Disclaimer</Link></li> */}
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-use">Terms of Use</Link></li>
               <li><Link href="/disclaimer">Disclaimer</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+              <li><Link href="/about">About Us</Link></li>
             </ul>
 
             <div className={styles.social}>

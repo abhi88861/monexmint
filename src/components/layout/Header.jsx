@@ -60,6 +60,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTheme } from '@/context/ThemeContext';
 import Logo from './Logo';
 import styles from './Header.module.css';
@@ -77,8 +78,19 @@ export default function Header() {
       <div className={styles.container}>
         
         {/* Logo */}
-        <Link href="/" className={styles.logo}>
+        {/* <Link href="/" className={styles.logo}>
           <Logo />
+          <span className={styles.logoText}>MONEX MINT</span>
+        </Link> */}
+        {/* Logo */}
+        <Link href="/" className={styles.logo}>
+          <Image
+            src="/logoMM.png"
+            alt="MonexMint Logo"
+            width={150}
+            height={45}
+            priority
+          />
           <span className={styles.logoText}>MONEX MINT</span>
         </Link>
 
