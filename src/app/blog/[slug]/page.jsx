@@ -27,4 +27,5 @@ export default function BlogPost({ params }) {
       <p style={{ whiteSpace: "pre-line" }}>{post.content}</p>
     </div>
   );
+  
 }
