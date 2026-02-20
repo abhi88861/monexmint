@@ -1,0 +1,323 @@
+/* ── Page Layout ─────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Content Grid ─────────────────────────────────────────── */
+.content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Form ────────────────────────────────────────────────── */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.loading {
+  text-align: center;
+  color: #6366f1;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #b91c1c;
+}
+
+.errorIcon {
+  font-size: 1rem;
+}
+
+/* ── Quick EMI Buttons ───────────────────────────────────── */
+.quickNote {
+  font-size: 0.813rem;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+}
+
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.quickBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.625rem 0.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.quickBtn:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}
+
+.quickBtnTenure {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+.quickBtnEMI {
+  font-size: 0.75rem;
+  color: #475569;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Results Section ─────────────────────────────────────── */
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Tenure Hero Card ────────────────────────────────────── */
+.tenureCard {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+}
+
+.tenureHero {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.tenureHeroLabel {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.tenureHeroValue {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tenureYears {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+}
+
+.tenureYears small {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tenureMonths {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
+  font-variant-numeric: tabular-nums;
+}
+
+.tenureMonths small {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tenureMonthsTotal {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Summary Grid ────────────────────────────────────────── */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.summaryItem {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.summaryLabel {
+  font-size: 0.813rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.summaryValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Impact Table ────────────────────────────────────────── */
+.tableNote {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.impactTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.impactTable thead tr {
+  background: #f1f5f9;
+}
+
+.impactTable th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #475569;
+  font-size: 0.813rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.impactTable td {
+  padding: 0.75rem 1rem;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+  font-variant-numeric: tabular-nums;
+}
+
+.impactTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.impactTable tbody tr:hover td {
+  background: #f8fafc;
+}
+
+.selectedRow td {
+  background: #eef2ff !important;
+  font-weight: 700;
+  color: #6366f1 !important;
+}
+
+/* ── Info Card ───────────────────────────────────────────── */
+.infoCard h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.infoCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.infoCard p {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+
+.infoCard ul {
+  color: #475569;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.infoCard ul li {
+  margin-bottom: 0.375rem;
+}
+
+/* ── Placeholder ─────────────────────────────────────────── */
+.placeholder {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.placeholderText {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin: 0;
+}

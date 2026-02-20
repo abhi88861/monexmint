@@ -1,0 +1,401 @@
+/* ── Page Layout ─────────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Content Grid ─────────────────────────────────────────── */
+.content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Form ────────────────────────────────────────────────── */
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  color: #6366f1;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+/* ── Preset Buttons ──────────────────────────────────────── */
+.presetRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.presetBtn {
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.presetBtn:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+  color: #4f46e5;
+}
+
+.presetBtnActive {
+  background: #eef2ff !important;
+  border-color: #6366f1 !important;
+  color: #4f46e5 !important;
+}
+
+/* ── Sustainable Withdrawal Card ─────────────────────────── */
+.sustainCard {
+  border: 1px solid #ddd6fe !important;
+  background: #faf5ff !important;
+}
+
+.sustainContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.sustainIcon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.sustainTitle {
+  font-size: 0.813rem;
+  font-weight: 700;
+  color: #6b21a8;
+  margin-bottom: 0.25rem;
+}
+
+.sustainValue {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #7c3aed;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.25rem;
+}
+
+.sustainNote {
+  font-size: 0.813rem;
+  color: #6b21a8;
+  line-height: 1.5;
+}
+
+.sustainComparison {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e9d5ff;
+}
+
+.sustainCompItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #475569;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.sustainGood {
+  background: #f0fdf4;
+  color: #065f46;
+  font-weight: 700;
+  border: 1px solid #bbf7d0;
+}
+
+.sustainWarn {
+  background: #fff7ed;
+  color: #9a3412;
+  font-weight: 700;
+  border: 1px solid #fed7aa;
+}
+
+/* ── Results Section ─────────────────────────────────────── */
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Status Banners ──────────────────────────────────────── */
+.safeBanner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
+}
+
+.depletedBanner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
+}
+
+.bannerIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.bannerTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.bannerSub {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ── Summary Grid ────────────────────────────────────────── */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.summaryItem {
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.summaryLabel {
+  font-size: 0.813rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.summaryValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Chart Container ─────────────────────────────────────── */
+.chartContainer {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+.tooltipBox {
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  min-width: 180px;
+}
+
+.tooltipYear {
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.375rem;
+  font-size: 0.875rem;
+}
+
+/* ── Table ───────────────────────────────────────────────── */
+.tableNote {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.scenarioTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.scenarioTable thead tr {
+  background: #f1f5f9;
+}
+
+.scenarioTable th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: #475569;
+  font-size: 0.813rem;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.scenarioTable td {
+  padding: 0.65rem 1rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.scenarioTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.scenarioTable tbody tr:hover td {
+  background: #f8fafc;
+}
+
+.selectedRow td {
+  background: #eef2ff !important;
+  font-weight: 700;
+}
+
+.badgeSafe {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #f0fdf4;
+  color: #059669;
+  border: 1px solid #bbf7d0;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badgeDepleted {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #fff7ed;
+  color: #d97706;
+  border: 1px solid #fed7aa;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ── Info Card ───────────────────────────────────────────── */
+.infoCard h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.infoCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.infoCard p {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+
+.infoCard ul {
+  color: #475569;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.infoCard ul li {
+  margin-bottom: 0.375rem;
+}
+
+/* ── Placeholder ─────────────────────────────────────────── */
+.placeholder {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.placeholderText {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin: 0;
+}
